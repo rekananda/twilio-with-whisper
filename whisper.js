@@ -4,7 +4,8 @@ let transcriber;
 
 async function initialize() {
   const { pipeline } = await import('@xenova/transformers');
-  transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny.en');
+  transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny');
+  
 }
 
 async function getAudioData(filePath) {

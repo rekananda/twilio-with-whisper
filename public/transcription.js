@@ -96,13 +96,15 @@ function recordAudio() {
 }
 
 function uploadAudio(blob) {
-  console.log(blob)
   const dlUrl = URL.createObjectURL(blob).split('/');
   const filename = `${dlUrl[3]}.wav`;
   const file = new File([blob], filename);
+  console.log(dlUrl)
+  console.log(dlUrl)
 
   const formData = new FormData();
   formData.append('audio', file);
+  console.log(formData)
 
   fetch('/uploadAudio', {
     method: 'POST',

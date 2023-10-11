@@ -20,7 +20,7 @@ const twilioClient = twilio(
 );
 
 const storage = multer.diskStorage({
-  destination: 'uploads/',
+  destination: 'tmp/',
   filename: (req, file, cb) => {
     cb(null, file.originalname);
   },
@@ -77,7 +77,8 @@ app.post('/join-room', async (req, res) => {
 
 app.post('/uploadAudio', upload.single('audio'), async (req, res) => {
   const filePath = req.file.path;
-  if (req.file.path === undefined) {
+  console.log(filePath)
+  if (filePath === undefined) {
     res.send({
       success: false,
     });
