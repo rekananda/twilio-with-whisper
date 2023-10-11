@@ -20,7 +20,7 @@ const twilioClient = twilio(
 );
 
 const storage = multer.diskStorage({
-  destination: 'tmp/',
+  destination: '/tmp/',
   filename: (req, file, cb) => {
     cb(null, file.originalname);
   },
