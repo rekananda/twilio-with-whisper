@@ -94,3 +94,5 @@ app.post('/uploadAudio', upload.single('audio'), async (req, res) => {
 app.listen(port, () => {
   console.log(`Express server running on port ${port}`);
 });
+
+module.exports = app;
