@@ -44,6 +44,7 @@ async function joinVideoRoom(roomName, token) {
     return await Twilio.Video.connect(token, {
       name: roomName,
       audio: { noiseSuppression: true, echoCancellation: true },
+      video: { width: 640 },
       tracks: [localVideoTrack, localAudioTrack, localDataTrack]
     });
   } catch (error) {

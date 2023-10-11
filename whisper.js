@@ -40,11 +40,11 @@ async function transcribe(filePath) {
   return transcript;
 }
 
-async function firstRun() {
-  await initialize();
-  const transcript = await transcribe('./uploads/audio.wav');
-  console.log('transcript', transcript);
-}
+// async function firstRun() {
+//   await initialize();
+//   const transcript = await transcribe('./uploads/audio.wav');
+//   console.log('transcript', transcript);
+// }
 
 // firstRun();
 

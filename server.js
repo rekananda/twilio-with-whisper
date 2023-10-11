@@ -76,7 +76,7 @@ app.post('/join-room', async (req, res) => {
 });
 
 app.post('/uploadAudio', upload.single('audio'), async (req, res) => {
-  const filePath = req. file.path;
+  const filePath = req.file.path;
   if (req.file.path === undefined) {
     res.send({
       success: false,
